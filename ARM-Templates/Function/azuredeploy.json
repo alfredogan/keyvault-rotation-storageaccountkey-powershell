@@ -108,7 +108,6 @@
             },
             "properties": {
                 "enabled": true,
-		"httpsOnly": true,
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms',concat(resourceGroup().name, '-rotation-fnapp-plan'))]",
                 "siteConfig": {
                     "appSettings": [
@@ -141,7 +140,8 @@
                             "value": "[reference(resourceId('microsoft.insights/components', parameters('functionAppName')), '2018-05-01-preview').InstrumentationKey]"
                         }
                     ]
-                }
+                },
+	     "httpsOnly": true
             },
             "resources": [
                 {
