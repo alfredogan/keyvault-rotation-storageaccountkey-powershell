@@ -108,6 +108,7 @@
             },
             "properties": {
                 "enabled": true,
+		"httpsOnly": true,
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms',concat(resourceGroup().name, '-rotation-fnapp-plan'))]",
                 "siteConfig": {
                     "appSettings": [
